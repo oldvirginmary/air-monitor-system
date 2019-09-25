@@ -457,7 +457,6 @@ header {
 	}
 
 	.faded {
-		/* font-size: 1.2rem; */
 		font-weight: bold;
 	}
 
@@ -481,6 +480,10 @@ header {
 
 	.card .airProperties {
 		top: 73%;
+	}
+
+	.time {
+		padding-top: 1.7rem;
 	}
 }
 
@@ -518,5 +521,9 @@ header {
 
 	.small {
 		font-size: 1.3rem;
+	}
+
+	.time {
+		padding-top: .9rem;
 	}
 }

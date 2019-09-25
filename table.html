@@ -386,6 +386,7 @@
 
 	<article>
 		<script>
+			Chart.defaults.global.defaultFontColor = '#000000';
 			var ctx = document.getElementById('myChart').getContext('2d');
 			var myChart = new Chart(ctx, {
 				type: 'bar',
@@ -441,7 +442,10 @@
 				},
 				options: {
 					legend: {
-						display: false
+						display: false,
+						labels: {
+							fontColor: '#ffffff',
+						},
 					},
 					scales: {
 						yAxes: [{
