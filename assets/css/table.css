@@ -229,14 +229,6 @@ header {
 	justify-content: space-around;
 }
 
-/* #myChart {
-	display: none;
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
-} */
-
 .card {
 	min-height: 180px;
 	width: 260px;
@@ -257,11 +249,6 @@ header {
 	border-radius: 9px 9px 0 0;
 }
 
-.card:focus,
-.card:hover {
-	box-shadow: 0px 10px 0px #bbbbbb;
-}
-
 .cardInfo {
 	height: 150px;
 	display: -webkit-flex;
@@ -279,7 +266,7 @@ header {
 
 .airProperties {
 	text-align: right;
-	margin-right: 1rem;
+	margin-right: 0.7rem;
 }
 
 .temperature {
@@ -291,7 +278,7 @@ header {
 }
 
 .airPollutionIndicator {
-	margin-left: 1.8rem;
+	margin-left: 1.5rem;
 }
 
 .airPollutionIndicator .value {
@@ -301,6 +288,10 @@ header {
 
 .faded {
 	color: #353535;
+}
+
+.small {
+	font-size: 0.8rem;
 }
 
 @media screen and (max-width: 1440px) {
@@ -367,6 +358,10 @@ header {
 
 	.airPollutionIndicator {
 		margin-left: 2.8rem;
+	}
+
+	.small {
+		font-size: 1rem;
 	}
 }
 
@@ -462,7 +457,8 @@ header {
 	}
 
 	.faded {
-		color: #000000;
+		/* font-size: 1.2rem; */
+		font-weight: bold;
 	}
 
 	.airPollutionIndicator {
@@ -500,10 +496,11 @@ header {
 
 	.card {
 		width: 100%;
+		height: 475px;
 	}
 
 	.cardTitle {
-		font-size: 2rem;
+		font-size: 1.9rem;
 		line-height: 4rem;
 	}
 
@@ -517,5 +514,9 @@ header {
 
 	.card .airProperties {
 		top: 77%;
+	}
+
+	.small {
+		font-size: 1.3rem;
 	}
 }

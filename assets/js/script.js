@@ -51,9 +51,9 @@
 
           if (pollutVal.children[0].innerText > 99) {
             pollutVal.style.marginLeft = '1.3rem';
-            pollutVal.children[0].style.fontSize = '6.8rem';
+            pollutVal.children[0].style.fontSize = '6rem';
           } else if (9 < pollutVal.children[0].innerText) {
-            pollutVal.style.marginLeft = '2.8rem';
+            pollutVal.style.marginLeft = '2rem';
           }
         }
       } else if (window.matchMedia('(max-width: 1440px)').matches) {
@@ -65,9 +65,9 @@
 
           if (pollutVal.children[0].innerText > 99) {
             pollutVal.style.marginLeft = '1rem';
-            pollutVal.children[0].style.fontSize = '5.8rem';
+            pollutVal.children[0].style.fontSize = '5.5rem';
           } else if (9 < pollutVal.children[0].innerText) {
-            pollutVal.style.marginLeft = '2rem';
+            pollutVal.style.marginLeft = '1.3rem';
           }
         }
       } else {
@@ -79,9 +79,9 @@
 
           if (pollutVal.children[0].innerText > 99) {
             pollutVal.style.marginLeft = '.7rem';
-            pollutVal.children[0].style.fontSize = '4.8rem';
+            pollutVal.children[0].style.fontSize = '4.2rem';
           } else if (9 < pollutVal.children[0].innerText) {
-            pollutVal.style.marginLeft = '1.5rem';
+            pollutVal.style.marginLeft = '1.1rem';
           }
         }
       }
@@ -135,6 +135,7 @@
 
   function setSorting () {
     var cards = document.getElementsByClassName('card');
+
     alphabetSorting = function () {
       var titles    = new Array();
       var rawTitles = cardsContainer.getElementsByClassName('cardTitle');
@@ -162,6 +163,7 @@
     }
 
     pollutionSorting = function () {
+      console.log(this);
       var values    = new Array();
       var rawValues = cardsContainer
                       .querySelectorAll('.airPollutionIndicator .value');
