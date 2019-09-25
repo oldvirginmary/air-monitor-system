@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<link rel="stylesheet" href="assets/css/table.css">
+	<link rel="icon" href="assets/img/logo.png">
+	<title>Система мониторинга воздуха - Красноярский научный центр СО РАН</title>
+</head>
+<body>
+	<header class="airHeader">
+		<div class="airLogo">
+			<img src="assets/img/logo.png" alt="Система мониторинга воздуха - Красноярский научный центр СО РАН">
+		</div>
+		<div class="airTitle">
+			<p>Система мониторинга воздуха</p>
+			<p>Красноярский научный центр СО РАН</p>
+		</div>
+		<ul class="airLinks">
+			<li><a class="airActiveButton link" href="#">Таблица</a></li>
+			<li><a class="link" href="map.html">Карта</a></li>
+			<li><a class="link" href="ext/map.html">Карта+</a></li>
+			<li><a class="airInactiveButton link" href="#">Архив</a></li>
+		</ul>
+		<ul class="entryNavigation">
+			<li><a class="signInButton airInactiveButton link" href="#">Войти</a></li>
+		</ul>
+	</header>
+	<main id="mainContent">
+		<h1 class="visually-hidden">Информация о погоде по районам</h1>
+
+		<section class="search">
+			<input id="searchLine" type="text">
+
+			<section class="sorting">
+				<div class="sortOrderSwitch">
+					<button id="orderSortSwitch">
+						<img src="assets/img/sort-switch.svg" alt="">
+					</button>
+				</div>
+				<div class="sortWayDropdown">
+				  <button class="dropBtn">Сортировать</button>
+				  <div class="sortWayList">
+				    <a id="alphabetSortBtn" href="#">По алфавиту</a>
+				    <a id="pollutionSortBtn" href="#">По значению</a>
+				  </div>
+				</div>
+			</section>
+		</section>
+
+
+
+		<section id="cardsContainer">
+			<article class="card" tabindex="0">
+				<h2 class="cardTitle">Академгородок</h2>
+				<div class="cardInfo">
+					<ul class="airPollutionIndicator">
+						<li class="value">31</li>
+						<li class="particleMatter faded">PM2.5</li>
+					</ul>
+					<ul class="airProperties">
+						<li class="temperature"><span class="value">8.1</span>°C</li>
+						<li class="humidity"><span class="value">72</span>%</li>
+						<li class="pressure"><span class="value">747</span>мм</li>
+						<li class="time faded">
+							<span class="hours">11</span>:<span class="minutes">00</span>
+						</li>
+					</ul>
+				</div>
+			</article>
+			<article class="card" tabindex="0">
+				<h2 class="cardTitle">Удачный</h2>
+				<div class="cardInfo">
+					<ul class="airPollutionIndicator">
+						<li class="value">5</li>
+						<li class="particleMatter faded">PM2.5</li>
+					</ul>
+					<ul class="airProperties">
+						<li class="temperature"><span class="value">8.1</span>°C</li>
+						<li class="humidity"><span class="value">72</span>%</li>
+						<li class="pressure"><span class="value">747</span>мм</li>
+						<li class="time faded">
+							<span class="hours">11</span>:<span class="minutes">00</span>
+						</li>
+					</ul>
+				</div>
+			</article>
+			<article class="card" tabindex="0">
+				<h2 class="cardTitle">Николаевка</h2>
+				<div class="cardInfo">
+					<ul class="airPollutionIndicator">
+						<li class="value">8</li>
+						<li class="particleMatter faded">PM2.5</li>
+					</ul>
+					<ul class="airProperties">
+						<li class="temperature"><span class="value">8.1</span>°C</li>
+						<li class="humidity"><span class="value">72</span>%</li>
+						<li class="pressure"><span class="value">747</span>мм</li>
+						<li class="time faded">
+							<span class="hours">11</span>:<span class="minutes">00</span>
+						</li>
+					</ul>
+				</div>
+			</article>
+			<article class="card" tabindex="0">
+				<h2 class="cardTitle">Телевизорная, 4Б</h2>
+				<div class="cardInfo">
+					<ul class="airPollutionIndicator">
+						<li class="value">15</li>
+						<li class="particleMatter faded">PM2.5</li>
+					</ul>
+					<ul class="airProperties">
+						<li class="temperature"><span class="value">8.1</span>°C</li>
+						<li class="humidity"><span class="value">72</span>%</li>
+						<li class="pressure"><span class="value">747</span>мм</li>
+						<li class="time faded">
+							<span class="hours">11</span>:<span class="minutes">00</span>
+						</li>
+					</ul>
+				</div>
+			</article>
+			<article class="card" tabindex="0">
+				<h2 class="cardTitle">Ветлужанка</h2>
+				<div class="cardInfo">
+					<ul class="airPollutionIndicator">
+						<li class="value">38</li>
+						<li class="particleMatter faded">PM2.5</li>
+					</ul>
+					<ul class="airProperties">
+						<li class="temperature"><span class="value">8.1</span>°C</li>
+						<li class="humidity"><span class="value">72</span>%</li>
+						<li class="pressure"><span class="value">747</span>мм</li>
+						<li class="time faded">
+							<span class="hours">11</span>:<span class="minutes">00</span>
+						</li>
+					</ul>
+				</div>
+			</article>
+			<article class="card" tabindex="0">
+				<h2 class="cardTitle">Овинный-Таймыр</h2>
+				<div class="cardInfo">
+					<ul class="airPollutionIndicator">
+						<li class="value">17</li>
+						<li class="particleMatter">PM2.5</li>
+					</ul>
+					<ul class="airProperties">
+						<li class="temperature"><span class="value">8.1</span>°C</li>
+						<li class="humidity"><span class="value">72</span>%</li>
+						<li class="pressure"><span class="value">747</span>мм</li>
+						<li class="time">
+							<span class="hours">11</span>:<span class="minutes">00</span>
+						</li>
+					</ul>
+				</div>
+			</article>
+			<article class="card" tabindex="0">
+				<h2 class="cardTitle">Минино</h2>
+				<div class="cardInfo">
+					<ul class="airPollutionIndicator">
+						<li class="value">9</li>
+						<li class="particleMatter">PM2.5</li>
+					</ul>
+					<ul class="airProperties">
+						<li class="temperature"><span class="value">8.1</span>°C</li>
+						<li class="humidity"><span class="value">72</span>%</li>
+						<li class="pressure"><span class="value">747</span>мм</li>
+						<li class="time">
+							<span class="hours">11</span>:<span class="minutes">00</span>
+						</li>
+					</ul>
+				</div>
+			</article>
+			<article class="card" tabindex="0">
+				<h2 class="cardTitle">Дрокино</h2>
+				<div class="cardInfo">
+					<ul class="airPollutionIndicator">
+						<li class="value">12</li>
+						<li class="particleMatter">PM2.5</li>
+					</ul>
+					<ul class="airProperties">
+						<li class="temperature"><span class="value">8.1</span>°C</li>
+						<li class="humidity"><span class="value">72</span>%</li>
+						<li class="pressure"><span class="value">747</span>мм</li>
+						<li class="time">
+							<span class="hours">11</span>:<span class="minutes">00</span>
+						</li>
+					</ul>
+				</div>
+			</article>
+			<article class="card" tabindex="0">
+				<h2 class="cardTitle">Ленина, 41</h2>
+				<div class="cardInfo">
+					<ul class="airPollutionIndicator">
+						<li class="value">108</li>
+						<li class="particleMatter">PM2.5</li>
+					</ul>
+					<ul class="airProperties">
+						<li class="temperature"><span class="value">8.1</span>°C</li>
+						<li class="humidity"><span class="value">72</span>%</li>
+						<li class="pressure"><span class="value">747</span>мм</li>
+						<li class="time">
+							<span class="hours">11</span>:<span class="minutes">00</span>
+						</li>
+					</ul>
+				</div>
+			</article>
+			<article class="card" tabindex="0">
+				<h2 class="cardTitle">Покровка</h2>
+				<div class="cardInfo">
+					<ul class="airPollutionIndicator">
+						<li class="value">5</li>
+						<li class="particleMatter">PM2.5</li>
+					</ul>
+					<ul class="airProperties">
+						<li class="temperature"><span class="value">8.1</span>°C</li>
+						<li class="humidity"><span class="value">72</span>%</li>
+						<li class="pressure"><span class="value">747</span>мм</li>
+						<li class="time">
+							<span class="hours">11</span>:<span class="minutes">00</span>
+						</li>
+					</ul>
+				</div>
+			</article>
+			<article class="card" tabindex="0">
+				<h2 class="cardTitle">Светлый</h2>
+				<div class="cardInfo">
+					<ul class="airPollutionIndicator">
+						<li class="value">5</li>
+						<li class="particleMatter">PM2.5</li>
+					</ul>
+					<ul class="airProperties">
+						<li class="temperature"><span class="value">8.1</span>°C</li>
+						<li class="humidity"><span class="value">72</span>%</li>
+						<li class="pressure"><span class="value">747</span>мм</li>
+						<li class="time">
+							<span class="hours">11</span>:<span class="minutes">00</span>
+						</li>
+					</ul>
+				</div>
+			</article>
+			<article class="card" tabindex="0">
+				<h2 class="cardTitle">Партизана, 3г</h2>
+				<div class="cardInfo">
+					<ul class="airPollutionIndicator">
+						<li class="value">4</li>
+						<li class="particleMatter">PM2.5</li>
+					</ul>
+					<ul class="airProperties">
+						<li class="temperature"><span class="value">8.1</span>°C</li>
+						<li class="humidity"><span class="value">72</span>%</li>
+						<li class="pressure"><span class="value">747</span>мм</li>
+						<li class="time">
+							<span class="hours">11</span>:<span class="minutes">00</span>
+						</li>
+					</ul>
+				</div>
+			</article>
+			<article class="card" tabindex="0">
+				<h2 class="cardTitle">Шахтеров, 25</h2>
+				<div class="cardInfo">
+					<ul class="airPollutionIndicator">
+						<li class="value">7</li>
+						<li class="particleMatter">PM2.5</li>
+					</ul>
+					<ul class="airProperties">
+						<li class="temperature"><span class="value">8.1</span>°C</li>
+						<li class="humidity"><span class="value">72</span>%</li>
+						<li class="pressure"><span class="value">747</span>мм</li>
+						<li class="time">
+							<span class="hours">11</span>:<span class="minutes">00</span>
+						</li>
+					</ul>
+				</div>
+			</article>
+			<article class="card" tabindex="0">
+				<h2 class="cardTitle">Свердловский</h2>
+				<div class="cardInfo">
+					<ul class="airPollutionIndicator">
+						<li class="value">2</li>
+						<li class="particleMatter">PM2.5</li>
+					</ul>
+					<ul class="airProperties">
+						<li class="temperature"><span class="value">8.1</span>°C</li>
+						<li class="humidity"><span class="value">72</span>%</li>
+						<li class="pressure"><span class="value">747</span>мм</li>
+						<li class="time">
+							<span class="hours">11</span>:<span class="minutes">00</span>
+						</li>
+					</ul>
+				</div>
+			</article>
+			<article class="card" tabindex="0">
+				<h2 class="cardTitle">Кировский</h2>
+				<div class="cardInfo">
+					<ul class="airPollutionIndicator">
+						<li class="value">6</li>
+						<li class="particleMatter">PM2.5</li>
+					</ul>
+					<ul class="airProperties">
+						<li class="temperature"><span class="value">8.1</span>°C</li>
+						<li class="humidity"><span class="value">72</span>%</li>
+						<li class="pressure"><span class="value">747</span>мм</li>
+						<li class="time">
+							<span class="hours">11</span>:<span class="minutes">00</span>
+						</li>
+					</ul>
+				</div>
+			</article>
+			<article class="card" tabindex="0">
+				<h2 class="cardTitle">Спутник</h2>
+				<div class="cardInfo">
+					<ul class="airPollutionIndicator">
+						<li class="value">38</li>
+						<li class="particleMatter">PM2.5</li>
+					</ul>
+					<ul class="airProperties">
+						<li class="temperature"><span class="value">8.1</span>°C</li>
+						<li class="humidity"><span class="value">72</span>%</li>
+						<li class="pressure"><span class="value">747</span>мм</li>
+						<li class="time">
+							<span class="hours">11</span>:<span class="minutes">00</span>
+						</li>
+					</ul>
+				</div>
+			</article>
+			<article class="card" tabindex="0">
+				<h2 class="cardTitle">Песчанка</h2>
+				<div class="cardInfo">
+					<ul class="airPollutionIndicator">
+						<li class="value">21</li>
+						<li class="particleMatter">PM2.5</li>
+					</ul>
+					<ul class="airProperties">
+						<li class="temperature"><span class="value">8.1</span>°C</li>
+						<li class="humidity"><span class="value">72</span>%</li>
+						<li class="pressure"><span class="value">747</span>мм</li>
+						<li class="time">
+							<span class="hours">11</span>:<span class="minutes">00</span>
+						</li>
+					</ul>
+				</div>
+			</article>
+			<article class="card" tabindex="0">
+				<h2 class="cardTitle">КРАЗ</h2>
+				<div class="cardInfo">
+					<ul class="airPollutionIndicator">
+						<li class="value">11</li>
+						<li class="particleMatter">PM2.5</li>
+					</ul>
+					<ul class="airProperties">
+						<li class="temperature"><span class="value">8.1</span>°C</li>
+						<li class="humidity"><span class="value">72</span>%</li>
+						<li class="pressure"><span class="value">747</span>мм</li>
+						<li class="time">
+							<span class="hours">11</span>:<span class="minutes">00</span>
+						</li>
+					</ul>
+				</div>
+			</article>
+			<article id="skeletonCard" class="card" tabindex="0" style="visibility: hidden; position: absolute;">
+				<h2 class="cardTitle"></h2>
+				<div class="cardInfo">
+					<ul class="airPollutionIndicator">
+						<li class="value"></li>
+						<li class="particleMatter"></li>
+					</ul>
+					<ul class="airProperties">
+						<li class="temperature"><span class="value"></span></li>
+						<li class="humidity"><span class="value"></span></li>
+						<li class="pressure"><span class="value"></span></li>
+						<li class="time">
+							<span class="hours"></span><span class="minutes"></span>
+						</li>
+					</ul>
+				</div>
+			</article>
+		</section>
+	</main>
+	<!-- <canvas id="myChart" style="padding: 0.8em 0.4em 0 0.4em; display: none;"></canvas> -->
+	<canvas id="myChart" style="padding: 1em 0.4em 0px;">
+	</canvas>
+	<link rel="stylesheet" href="assets/css/Chart.min.css">
+	<script src="assets/js/Chart.min.js"></script>
+
+
+	<article>
+		<script>
+			var ctx = document.getElementById('myChart').getContext('2d');
+			var myChart = new Chart(ctx, {
+				type: 'bar',
+				data: {
+					labels: [
+						'23.08', '24.08', '25.08', '26.08', '27.08',
+						'28.08', '29.08', '30.08', '31.08', '01.09',
+						'02.09', '03.09', '04.09', '05.09', '23.08',
+						'24.08', '25.08', '26.08', '27.08', '28.08',
+						'29.08', '30.08', '31.08', '01.09', '02.09',
+						'29.08', '30.08', '31.08', '01.09', '02.09'
+					],
+					datasets: [{
+						label: 'Воздух за сутки',
+						data: [
+							5, 18, 32, 7, 5, 18, 32, 7, 5, 18,
+							32, 7, 32, 7, 5, 18, 62, 7, 5, 18,
+							32, 7, 32, 7, 5, 18, 32, 7, 5, 18,
+						],
+						backgroundColor: [
+							'rgb(0, 0, 0)',
+							'rgb(0, 0, 0)',
+							'rgb(0, 0, 0)',
+							'rgb(0, 0, 0)',
+							'rgb(0, 0, 0)',
+							'rgb(0, 0, 0)',
+							'rgb(0, 0, 0)',
+							'rgb(0, 0, 0)',
+							'rgb(0, 0, 0)',
+							'rgb(0, 0, 0)',
+							'rgb(0, 0, 0)',
+							'rgb(0, 0, 0)',
+							'rgb(0, 0, 0)',
+							'rgb(0, 0, 0)',
+							'rgb(0, 0, 0)',
+							'rgb(0, 0, 0)',
+							'rgb(0, 0, 0)',
+							'rgb(0, 0, 0)',
+							'rgb(0, 0, 0)',
+							'rgb(0, 0, 0)',
+							'rgb(0, 0, 0)',
+							'rgb(0, 0, 0)',
+							'rgb(0, 0, 0)',
+							'rgb(0, 0, 0)',
+							'rgb(0, 0, 0)',
+							'rgb(0, 0, 0)',
+							'rgb(0, 0, 0)',
+							'rgb(0, 0, 0)',
+							'rgb(0, 0, 0)',
+							'rgb(0, 0, 0)',
+						]
+					}]
+				},
+				options: {
+					legend: {
+						display: false
+					},
+					scales: {
+						yAxes: [{
+							ticks: {
+								beginAtZero: true
+							}
+						}]
+					}
+				}
+			});
+		</script>
+	</article>
+	<script src="assets/js/script.js"></script>
+</body>
+</html>

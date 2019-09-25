@@ -1,0 +1,521 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+html {
+	box-sizing: border-box;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 18px;
+	font-weight: 400;
+	color: #212529;
+	text-align: left;
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: inherit;
+}
+
+button {
+	border: none;
+	outline: none;
+	background: none;
+	cursor: pointer;
+}
+
+.visually-hidden {
+	display: none;
+	position: absolute;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+}
+
+/* Header */
+header {
+	border-bottom: 5px solid #055a81;
+}
+
+.airHeader {
+	display: -webkit-flex;
+	display: -ms-flex;
+	display: flex;
+
+	flex-wrap: wrap;
+
+	align-items: center;
+}
+
+.airLinks,
+.entryNavigation {
+	display: -webkit-flex;
+	display: -ms-flex;
+	display: flex;
+
+	list-style: none;
+	text-transform: uppercase;
+}
+
+.airLogo img {
+	width: 70px;
+	height: 70px;
+	float: left;
+	margin-left: 2px;
+}
+
+.entryNavigation {
+	position: absolute;
+	right: 0;
+	clear: both;
+}
+
+.link {
+	display: block;
+	padding: 22px;
+	margin: 0;
+  color: #222222;
+  font-size: 1rem;
+  letter-spacing: 1px;
+  line-height: 1.5;
+  font-weight: bold;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.link:hover {
+	background-color: #eeeeee;
+}
+
+.airLinks .airInactiveButton,
+.entryNavigation .airInactiveButton {
+	cursor: auto;
+	color: #cccccc;
+}
+
+.airLinks li:nth-child(1) a {
+  color: #ffffff;
+  background-color: #055a81;
+}
+
+.airTitle {
+	color: #055a81;
+	margin: 0 15px;
+}
+
+.airTitle p {
+	text-align: left;
+  font-weight: bold;
+}
+
+.airTitle p:first-child {
+	font-size: 1.1rem;
+}
+
+.search {
+	display: -webkit-flex;
+	display: -ms-flex;
+	display: flex;
+}
+
+#searchLine {
+	width: 100%;
+
+	font-size: 2.5rem;
+	line-height: 4rem;
+	letter-spacing: 3px;
+	text-align: center;
+
+	background: url('../img/search.png') no-repeat 2% 50%;
+
+	border: none;
+	outline: none;
+}
+
+#searchLine::placeholder {
+	text-transform: lowercase;
+	color: #888888;
+}
+
+#searchLine:focus::placeholder {
+	color: transparent;
+}
+
+#searchLine,
+#orderSortSwitch,
+.dropBtn {
+	border-bottom: 5px solid #055a81;
+	height: 65px;
+}
+
+.sorting {
+	display: -webkit-flex;
+	display: -ms-flex;
+	display: flex;
+}
+
+.dropBtn {
+  color: #ffffff;
+	background-color: #055a81;
+	font-size: 1rem;
+	font-weight: bold;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+
+	min-width: 200px;
+	padding: 16px;
+}
+
+.sortWayDropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.sortWayList {
+	width: 100%;
+  display: none;
+	position: absolute;
+  background-color: #f1f1f1;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+	border: 5px solid #055a81;
+	border-top: 0;
+  z-index: 1;
+}
+
+.sortWayList a {
+  color: black;
+  font-size: 1.2rem;
+  text-decoration: none;
+  display: block;
+	padding: 12px 16px;
+}
+
+.sortWayList a::after {
+  content: '';
+	float: right;
+}
+
+.sortWayList a:hover {
+	background-color: #dddddd;
+}
+
+.sortWayDropdown:hover .sortWayList {
+	display: block;
+}
+
+.sortWayDropdown:hover .dropBtn,
+.dropBtn:focus {
+	background-color: #074b6a;
+}
+
+#orderSortSwitch img {
+	vertical-align: middle;
+}
+
+
+/* Main */
+#cardsContainer {
+	width: 1440px;
+	margin: 0 auto 30px auto;
+
+	display: -webkit-flex;
+	display: -ms-flex;
+	display: flex;
+
+	flex-wrap: wrap;
+
+	justify-content: space-around;
+}
+
+/* #myChart {
+	display: none;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+} */
+
+.card {
+	min-height: 180px;
+	width: 260px;
+	margin-top: 30px;
+	border-radius: 9px;
+
+	text-align: center;
+
+	cursor: pointer;
+	outline: none;
+
+	font-family: "Roboto", "Arial", sans-serif;
+}
+
+.cardTitle {
+	font-size: 1.5rem;
+	line-height: 2.2rem;
+	border-radius: 9px 9px 0 0;
+}
+
+.card:focus,
+.card:hover {
+	box-shadow: 0px 10px 0px #bbbbbb;
+}
+
+.cardInfo {
+	height: 150px;
+	display: -webkit-flex;
+	display: -ms-flex;
+	display: flex;
+
+	align-items: center;
+}
+
+.airPollutionIndicator,
+.airProperties {
+	list-style: none;
+	width: 50%;
+}
+
+.airProperties {
+	text-align: right;
+	margin-right: 1rem;
+}
+
+.temperature {
+	font-size: 1.7rem;
+}
+
+.time {
+	padding-top: 1rem;
+}
+
+.airPollutionIndicator {
+	margin-left: 1.8rem;
+}
+
+.airPollutionIndicator .value {
+	font-size: 6.4rem;
+	line-height: 5.5rem;
+}
+
+.faded {
+	color: #353535;
+}
+
+@media screen and (max-width: 1440px) {
+	#cardsContainer {
+		width: 1024px;
+	}
+
+	.card {
+		width: 320px;
+		font-size: 1.4em;
+	}
+
+	.cardInfo {
+		height: 190px;
+	}
+
+	.airProperties {
+		height: 145px;
+	}
+
+	.airPollutionIndicator {
+		margin-left: 2.2rem;
+	}
+
+	.airPollutionIndicator .value {
+		line-height: 7.5rem;
+	}
+
+	.temperature {
+		font-size: 2.2rem;
+	}
+
+	.time {
+		padding-top: .9rem;
+	}
+}
+
+@media screen and (max-width: 1024px) {
+
+	#searchLine {
+		background-position: 3% 50%;
+	}
+
+	.airTitle {
+		display: none;
+	}
+
+	#cardsContainer {
+		width: 768px;
+	}
+
+	.card {
+		width: 47%;
+	}
+
+	.cardTitle {
+		font-size: 1.8rem;
+		line-height: 2.5rem;
+	}
+
+	.cardInfo {
+    height: 200px;
+	}
+
+	.airPollutionIndicator {
+		margin-left: 2.8rem;
+	}
+}
+
+@media screen and (max-width: 768px) {
+	.airHeader {
+		-webkit-flex-direction: column;
+		-ms-flex-direction: column;
+		flex-direction: column;
+	}
+
+	.airLogo img {
+		width: 103px;
+		height: 103px;
+	}
+
+	.airLinks {
+		-webkit-flex-direction: column;
+		-ms-flex-direction: column;
+		flex-direction: column;
+
+		width: 100%;
+		text-align: center;
+	}
+
+	.link {
+		font-size: 2rem;
+	}
+
+	.entryNavigation {
+		position: inherit;
+	}
+
+	.search {
+		display: block;
+	}
+
+	#searchLine,
+	#orderSortSwitch,
+	.dropBtn {
+		height: 80px;
+	}
+
+	#searchLine {
+		background-position: 4% 50%;
+	}
+
+	.sorting {
+		justify-content: flex-end;
+	}
+
+	.sortOrderSwitch {
+		width: 80px;
+		text-align: center;
+		border: none;
+	}
+
+	.dropBtn,
+	.sortWayList a {
+		font-size: 1.6rem;
+	}
+
+	#orderSortSwitch,
+	.dropBtn {
+		border: none;
+	}
+
+	#cardsContainer {
+		width: 100%;
+	}
+
+	.card {
+		position: relative;
+		width: 47%;
+	}
+
+	.cardTitle {
+		font-size: 1.6rem;
+		line-height: 3.5rem;
+	}
+
+	.cardInfo {
+		height: 400px;
+	}
+
+	.airProperties {
+		position: absolute;
+		top: 72%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+
+		text-align: center;
+		font-weight: bold;
+	}
+
+	.faded {
+		color: #000000;
+	}
+
+	.airPollutionIndicator {
+		margin-left: 0;
+	}
+
+	.airPollutionIndicator .particleMatter {
+		position: absolute;
+		top: 48%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+	}
+
+	.card .airPollutionIndicator .value {
+		position: absolute;
+		top: 32%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+	}
+
+	.card .airProperties {
+		top: 73%;
+	}
+}
+
+@media screen and (max-width: 550px) {
+	.sorting {
+		float: none;
+		justify-content: space-between;
+	}
+
+	#searchLine {
+		background-position: 6% 50%;
+	}
+
+	.card {
+		width: 100%;
+	}
+
+	.cardTitle {
+		font-size: 2rem;
+		line-height: 4rem;
+	}
+
+	.card .airPollutionIndicator .value {
+		top: 35%;
+	}
+
+	.card .airPollutionIndicator .particleMatter {
+		top: 55%;
+	}
+
+	.card .airProperties {
+		top: 77%;
+	}
+}
