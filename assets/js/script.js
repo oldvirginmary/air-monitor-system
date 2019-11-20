@@ -15,17 +15,17 @@
           cards[i].style.backgroundColor  = '#CC0000';
           cardTitle.style.backgroundColor = '#B80000';
         } else if (30 <= pollutVal.children[0].innerText) {
-          cards[i].style.backgroundColor  = '#FF9900';
-          cardTitle.style.backgroundColor = '#EB8500';
+          cards[i].style.backgroundColor  = '#ff8c00';
+          cardTitle.style.backgroundColor = '#f27b08';
         } else if (12 <= pollutVal.children[0].innerText) {
-          cards[i].style.backgroundColor  = '#FFFF00';
-          cardTitle.style.backgroundColor = '#EBEB00';
+          cards[i].style.backgroundColor  = '#ffdc02';
+          cardTitle.style.backgroundColor = '#ffcd0c';
         } else {
           cards[i].style.backgroundColor  = '#00CC00';
           cardTitle.style.backgroundColor = '#00B800';
         }
       }
-    }
+    };
 
     cardsAlignment = function () {
       if (window.matchMedia('(max-width: 550px)').matches) {
@@ -85,7 +85,7 @@
           }
         }
       }
-    }
+    };
 
     cardsColoring();
     cardsAlignment();
@@ -101,7 +101,7 @@
       for (var i = 0; i < cards.length; i++) {
         cards[i].style.display = 'none';
       }
-    }
+    };
 
     searchByTitle = function () {
       for (var i = 0; i < cards.length; i++) {
@@ -124,7 +124,7 @@
           cards[i].style.display = 'block';
         }
       }
-    }
+    };
 
     document.getElementById('searchLine').oninput = function () {
       hideAllCards();
@@ -160,7 +160,7 @@
       document.getElementById('alphabetSortBtn')
               .style
               .backgroundColor = '#dddddd';
-    }
+    };
 
     pollutionSorting = function () {
       console.log(this);
@@ -193,7 +193,7 @@
       document.getElementById('pollutionSortBtn')
               .style
               .backgroundColor = '#dddddd';
-    }
+    };
 
     reverseOrder = function () {
       var titles    = new Array();
@@ -212,7 +212,7 @@
           }
         }
       }
-    }
+    };
 
     document.getElementById('pollutionSortBtn').onclick = pollutionSorting;
     document.getElementById('alphabetSortBtn').onclick = alphabetSorting;
@@ -248,7 +248,7 @@
           this.append(graph);
           this.setAttribute('pressed', '');
         }
-      }
+      };
 
       cards[i].onmouseout = function () {
           this.getElementsByClassName('cardInfo')[0].style.display = 'flex';
